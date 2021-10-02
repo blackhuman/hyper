@@ -198,7 +198,7 @@ export default class SplitPane extends React.PureComponent<SplitPaneProps, {drag
             this is not the case due to hterm's <iframe>
           */
           .splitpane_shim {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             right: 0;

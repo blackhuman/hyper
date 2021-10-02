@@ -136,8 +136,11 @@ export default class Terms extends React.Component<TermsProps> {
 
         <style jsx>{`
           .terms_terms {
-            position: absolute;
-            margin-top: 34px;
+            position: relative;
+            flex-grow: 1;
+            flex-shrink: 2;
+            min-height: 0;
+            margin-top: 0px;
             top: 0;
             right: 0;
             left: 0;
@@ -146,12 +149,12 @@ export default class Terms extends React.Component<TermsProps> {
           }
 
           .terms_termsShifted {
-            margin-top: 68px;
+            margin-top: 34px;
             animation: shift-down 0.2s ease-out;
           }
 
           .terms_termsNotShifted {
-            margin-top: 34px;
+            margin-top: 0px;
             animation: shift-up 0.3s ease;
           }
 
@@ -177,7 +180,7 @@ export default class Terms extends React.Component<TermsProps> {
             display: block;
             width: 100%;
             height: 100%;
-            position: absolute;
+            position: relative;
             top: 0;
             left: -9999em; /* Offscreen to pause xterm rendering, thanks to IntersectionObserver */
           }

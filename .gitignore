@@ -19,3 +19,5 @@ yarn-error.log
 .vscode/*
 !.vscode/launch.json
 .idea
+
+*.code-workspace

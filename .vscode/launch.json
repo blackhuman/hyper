@@ -7,9 +7,20 @@
       "name": "Launch Hyper",
       "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
       "program": "${workspaceRoot}/target/index.js",
-      "protocol": "inspector"
+      "protocol": "inspector",
+      "preLaunchTask": "yarn run dev"
     },
-     {
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Hyper watch changes",
+      "runtimeExecutable": "yarn",
+      "program": "run",
+      "args": ["app"],
+      "protocol": "inspector",
+      "preLaunchTask": "yarn run dev"
+    },
+    {
       "type": "node",
       "request": "launch",
       "name": "cli",

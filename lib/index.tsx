@@ -3,6 +3,7 @@ import forceUpdate from 'react-deep-force-update';
 import {Provider} from 'react-redux';
 import React from 'react';
 import {render} from 'react-dom';
+import Split from 'react-split';
 
 import rpc from './rpc';
 import init from './actions/index';
@@ -233,7 +234,34 @@ rpc.on('leave full screen', () => {
 
 const app = render(
   <Provider store={store_}>
-    <HyperContainer />
+    <style jsx>
+      {`
+        .hyper_container {
+          position: absolute;
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          flex-direction: row;
+        }
+
+        .hyper_right {
+          position: absolute;
+          right: 5px;
+          background: orange;
+          width: 50px;
+          height: 100%;
+          margin-left: 3px;
+        }
+
+        :global(.gutter-horizontal) {
+          cursor: col-resize;
+        }
+      `}
+    </style>
+    <Split className="hyper_container">
+      <HyperContainer />
+      <div className="hyper_right">He</div>
+    </Split>
   </Provider>,
   document.getElementById('mount')
 );

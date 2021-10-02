@@ -1,0 +1,10 @@
+{
+  "version": "v1",
+  "packages": {
+    "react-split": {
+      "signature": "6d91a83a7477532ca55dee991f679cd6",
+      "file": true,
+      "replaced": "^2.0.13"
+    }
+  }
+}

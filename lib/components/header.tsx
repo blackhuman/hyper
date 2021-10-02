@@ -148,7 +148,7 @@ export default class Header extends React.PureComponent<HeaderProps> {
 
         <style jsx>{`
           .header_header {
-            position: fixed;
+            position: static;
             top: 1px;
             left: 1px;
             right: 1px;
@@ -163,7 +163,7 @@ export default class Header extends React.PureComponent<HeaderProps> {
           .header_windowHeader {
             height: 34px;
             width: 100%;
-            position: fixed;
+            position: static;
             top: 1px;
             left: 1px;
             right: 1px;
@@ -204,13 +204,13 @@ export default class Header extends React.PureComponent<HeaderProps> {
           }
 
           .header_hamburgerMenuLeft {
-            position: fixed;
+            position: static;
             top: 0;
             left: 0;
           }
 
           .header_hamburgerMenuRight {
-            position: fixed;
+            position: static;
             top: 0;
             right: 0;
           }
@@ -220,7 +220,7 @@ export default class Header extends React.PureComponent<HeaderProps> {
             width: 120px;
             height: 34px;
             justify-content: space-between;
-            position: fixed;
+            position: static;
             top: 0;
             right: 0;
           }

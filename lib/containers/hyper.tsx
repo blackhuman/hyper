@@ -1,6 +1,7 @@
 import React from 'react';
 import Mousetrap, {MousetrapInstance} from 'mousetrap';
 
+import {remote} from 'electron';
 import {connect} from '../utils/plugins';
 import * as uiActions from '../actions/ui';
 import {getRegisteredKeys, getCommandHandler, shouldPreventDefault} from '../command-registry';
@@ -121,12 +122,11 @@ class Hyper extends React.PureComponent<HyperProps> {
         <style jsx>
           {`
             .hyper_main {
-              position: fixed;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
+              position: static;
+              display: flex;
+              flex-direction: column;
               border: 1px solid #333;
+              height: 100%;
             }
 
             .hyper_mainRounded {

@@ -396,6 +396,7 @@ export default class Term extends React.PureComponent<TermProps> {
     if (component) {
       this.resizeObserver = new ResizeObserver(() => {
         clearTimeout(this.resizeTimeout);
+        console.log('resize');
         this.resizeTimeout = setTimeout(() => {
           this.fitResize();
         }, 500);
