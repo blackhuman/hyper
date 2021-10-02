@@ -138,7 +138,6 @@ export default class Terms extends React.Component<TermsProps> {
           .terms_terms {
             position: relative;
             flex-grow: 1;
-            flex-shrink: 2;
             min-height: 0;
             margin-top: 0px;
             top: 0;
@@ -180,7 +179,7 @@ export default class Terms extends React.Component<TermsProps> {
             display: block;
             width: 100%;
             height: 100%;
-            position: relative;
+            position: absolute;
             top: 0;
             left: -9999em; /* Offscreen to pause xterm rendering, thanks to IntersectionObserver */
           }
